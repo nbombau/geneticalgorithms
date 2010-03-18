@@ -1,0 +1,13 @@
+c:\users\admin\documents\visual studio 2010\Projects\Genetics\Presentation\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2010\Projects\Genetics\Presentation\obj\x86\Debug\Presentation.Properties.Resources.resources
+c:\users\admin\documents\visual studio 2010\Projects\Genetics\Presentation\obj\x86\Debug\ResGen.read.1.tlog
+c:\users\admin\documents\visual studio 2010\Projects\Genetics\Presentation\obj\x86\Debug\ResGen.write.1.tlog
+c:\users\admin\documents\visual studio 2010\Projects\Genetics\Presentation\bin\Debug\Presentation.exe
+c:\users\admin\documents\visual studio 2010\Projects\Genetics\Presentation\bin\Debug\Presentation.pdb
+c:\users\admin\documents\visual studio 2010\Projects\Genetics\Presentation\obj\x86\Debug\Presentation.exe
+c:\users\admin\documents\visual studio 2010\Projects\Genetics\Presentation\obj\x86\Debug\Presentation.pdb
+c:\users\admin\documents\visual studio 2010\Projects\Genetics\Presentation\obj\x86\Debug\Presentation.MainForm.resources
+c:\users\admin\documents\visual studio 2010\Projects\Genetics\Presentation\bin\Debug\Genetics.dll
+c:\users\admin\documents\visual studio 2010\Projects\Genetics\Presentation\bin\Debug\Optimization.dll
+c:\users\admin\documents\visual studio 2010\Projects\Genetics\Presentation\bin\Debug\Genetics.pdb
+c:\users\admin\documents\visual studio 2010\Projects\Genetics\Presentation\bin\Debug\Optimization.pdb
