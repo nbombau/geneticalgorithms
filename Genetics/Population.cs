@@ -45,14 +45,14 @@ namespace Genetics
 
         private double MutationRate 
         { 
-            get { return 0.0; } 
+            get { return 0.1; } 
         }
 
         private double fitnessMax = 0;
         private double fitnessSum = 0;
         private double fitnessAvg = 0;
-        private IChromosome bestChromosome = null;
-        private IChromosome bestSolution;
+        private IChromosome bestChromosome = default(IChromosome);
+        private IChromosome bestSolution = default(IChromosome);
 
         #endregion
 
