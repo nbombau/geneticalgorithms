@@ -12,7 +12,7 @@ namespace Optimization
     /// </summary>
     public class OptimizationFunction : IFitnessFunction
     {
-        private Expression<Func<double, double>> Function { get; set; }
+        public Expression<Func<double, double>> Function { get; set; }
 
         /// <summary>
         /// Modos de Optimizacion
@@ -58,7 +58,7 @@ namespace Optimization
         {
             this.range = range;
             //TODO: esto va como parametro en realidad
-            this.Function = (x => - x*(x -255));
+            this.Function = (x => 0.1 + Math.Sin(x * Math.PI * 5)*0.1 + x*0.2);
         }
 
         /// <summary>

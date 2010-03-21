@@ -14,7 +14,7 @@ namespace Genetics
 
         private IFitnessFunction FitnessFunction { get; set; }
         private ISelection Selection { get; set; }
-
+        
         private IList<IChromosome> chromosomes;
         private IList<IChromosome> Chromosomes
         {
@@ -33,7 +33,7 @@ namespace Genetics
 
         }
 
-        
+        private int iterations;
         private int populationSize;
         private double randomSelectionPortion = 0.0;
 
@@ -45,13 +45,14 @@ namespace Genetics
 
         private double MutationRate 
         { 
-            get { return 0.1; } 
+            get { return 0.0; } 
         }
 
         private double fitnessMax = 0;
         private double fitnessSum = 0;
         private double fitnessAvg = 0;
         private IChromosome bestChromosome = null;
+        private IChromosome bestSolution;
 
         #endregion
 
@@ -97,6 +98,14 @@ namespace Genetics
         }
 
         /// <sumary>
+        /// Solucion
+        /// </sumary>
+        public IChromosome BestSolution
+        {
+            get { return bestSolution; }
+        }
+
+        /// <sumary>
         /// Tamanio de la poblacion TODO: ver de usar solo la lista y su count
         /// </sumary>
         public int PopulationSize
@@ -107,6 +116,18 @@ namespace Genetics
 
         #endregion
 
+        #region Eventos
+
+        public delegate void GenerationEndedEventHandler(object sender, GenerationEndedEventArgs e);
+        public event GenerationEndedEventHandler GenerationEnded;
+
+        protected void OnGenerationEnded(GenerationEndedEventArgs e)
+        {
+            GenerationEnded(this, e);
+        }
+
+        #endregion Eventos
+
         #region Constructores
 
         /// <summary>
@@ -115,12 +136,13 @@ namespace Genetics
         public Population(int size,
                             IChromosome ancestor,
                             IFitnessFunction fitnessFunction,
-                            ISelection selectionMethod)
+                            ISelection selectionMethod,
+                            int numberIterations)
         {
             FitnessFunction = fitnessFunction;
             Selection = selectionMethod;
             PopulationSize = size;
-
+            iterations = numberIterations;
             // Agregar el ancestro a la poblacion
             ancestor.Evaluate(fitnessFunction);
             Chromosomes.Add(ancestor);
@@ -143,13 +165,16 @@ namespace Genetics
             IChromosome ancestor,
             IFitnessFunction fitnessFunction,
             ISelection selectionMethod,
-            double randomSelectionPortion)
-            : this(size, ancestor, fitnessFunction, selectionMethod)
+            double randomSelectionPortion,
+            int iterations)
+            : this(size, ancestor, fitnessFunction, selectionMethod, iterations)
         {
             randomSelectionPortion = Math.Max(0, Math.Min(0.5, randomSelectionPortion));
         }
 
         #endregion
+
+        #region Metodos
 
         /// <summary>
         /// Se regenera la poblacion llenandola de cromosomas al azar
@@ -260,6 +285,11 @@ namespace Genetics
                 {
                     fitnessMax = fitness;
                     bestChromosome = c;
+                    //me fijo si es mejor que la solucion global
+                    if (bestSolution == default(IChromosome) || c.Fitness > bestSolution.Fitness)
+                    {
+                        bestSolution = c;
+                    }
                 }
             }
             fitnessAvg = fitnessSum / PopulationSize;
@@ -273,6 +303,16 @@ namespace Genetics
             Crossover();
             Mutate();
             Select();
+        }
+
+        public void RunSimulation()
+        { 
+            int i;
+            for (i = 0; i < iterations; i++)
+            {
+                RunEpoch();
+                OnGenerationEnded(new GenerationEndedEventArgs(this, i + 1));
+            }
         }
 
         /// <sumary>
@@ -298,5 +338,7 @@ namespace Genetics
             }
             System.Diagnostics.Debug.WriteLine("==========================");
         }
+
+        #endregion Metodos
     }
 }
