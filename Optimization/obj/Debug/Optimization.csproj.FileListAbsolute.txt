@@ -5,3 +5,10 @@ c:\users\admin\documents\visual studio 2010\Projects\Genetics\Optimization\obj\D
 c:\users\admin\documents\visual studio 2010\Projects\Genetics\Optimization\obj\Debug\Optimization.pdb
 c:\users\admin\documents\visual studio 2010\Projects\Genetics\Optimization\bin\Debug\Genetics.dll
 c:\users\admin\documents\visual studio 2010\Projects\Genetics\Optimization\bin\Debug\Genetics.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Optimization\bin\Debug\Optimization.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Optimization\bin\Debug\Optimization.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Optimization\bin\Debug\Genetics.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Optimization\bin\Debug\Genetics.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Optimization\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Optimization\obj\Debug\Optimization.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Optimization\obj\Debug\Optimization.pdb

@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GenerationEndedEventArgs.cs" />
     <Compile Include="IChromosome.cs" />
     <Compile Include="IFitnessFunction.cs" />
     <Compile Include="ISelection.cs" />
