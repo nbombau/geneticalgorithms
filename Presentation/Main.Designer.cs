@@ -262,6 +262,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MinimumSize = new System.Drawing.Size(738, 396);
             this.Name = "MainForm";
             this.Text = "Optimizacion de Funciones";
             this.Load += new System.EventHandler(this.MainForm_Load);
