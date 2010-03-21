@@ -333,7 +333,7 @@ namespace Genetics
             foreach (IChromosome c in Chromosomes)
             {
                 System.Diagnostics.Debug.WriteLine("genotype = " + c.ToString() +
-                    //", phenotype = " + c.(c) +
+                    //", phenotype = " +  +
                     " , fitness = " + c.Fitness);
             }
             System.Diagnostics.Debug.WriteLine("==========================");
