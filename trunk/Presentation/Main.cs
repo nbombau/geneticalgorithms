@@ -16,7 +16,7 @@ namespace Presentation
     {
         private OptimizationFunction function = new OptimizationFunction(new DoubleRange(0,1));
         
-        private Population population;
+        private Population population = default(Population);
         private Population Population
         {
             get
@@ -53,8 +53,6 @@ namespace Presentation
         {
             InitializeComponent();
 
-
-            // add data series to chart
             chart.AddDataSeries("function", Color.Red, Chart.SeriesType.Line, 1);
             chart.AddDataSeries("solution", Color.Blue, Chart.SeriesType.Dots, 5);
             UpdateChart();
@@ -105,6 +103,7 @@ namespace Presentation
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            Reset();
             Population.GenerationEnded += new Population.GenerationEndedEventHandler(OnGenerationEnded);
             ToggleControls();
             backgroundWorker1.RunWorkerAsync();
@@ -118,7 +117,6 @@ namespace Presentation
         private void BackgroundWorkCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             txtBest.Text = function.TranslateNative(population.BestSolution).ToString();
-            Reset();
             ToggleControls();
         }
 
@@ -139,6 +137,7 @@ namespace Presentation
         private void btnStop_Click(object sender, EventArgs e)
         {
             backgroundWorker1.CancelAsync();
+            Reset();
         } 
     }
 }
