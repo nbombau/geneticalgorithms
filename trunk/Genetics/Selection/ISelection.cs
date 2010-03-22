@@ -16,12 +16,12 @@ namespace Genetics
         /// <summary>
         /// Realiza una seleccion sobre la poblacion
         /// </summary>
-        /// <param name="chromosomes">
+        /// <param name="Individuals">
         /// Lista de Cromosomas entre los cuales realizar la seleccion
         /// </param>
         /// <param name="size">
         /// Cantidad de cromosomas que se deben seleccionar
         /// </param>
-        void Select(IList<IChromosome> chromosomes, int size);
+        void Select(IList<IIndividual> Individuals, int size);
     }
 }

@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Genetics;
 
-namespace Optimization
+namespace Genetics
 {
     /// <summary>
     /// Metodo de seleccion de ruleta
@@ -21,14 +20,14 @@ namespace Optimization
         /// <summary>
         /// Seleccionar un subconjunto de la poblacion
         /// </summary>
-        public void Select(IList<IChromosome> chromosomes, int size)
+        public void Select(IList<IIndividual> Individuals, int size)
         {
-            IList<IChromosome> newPopulation = new List<IChromosome>();
+            IList<IIndividual> newPopulation = new List<IIndividual>();
          
-            int currentSize = chromosomes.Count;
+            int currentSize = Individuals.Count;
 
             double fitnessSum = 0;
-            foreach (IChromosome c in chromosomes)
+            foreach (IIndividual c in Individuals)
             {
                 fitnessSum += c.Fitness;
             }
@@ -37,7 +36,7 @@ namespace Optimization
             double s = 0;
             int k = 0;
 
-            foreach (IChromosome c in chromosomes)
+            foreach (IIndividual c in Individuals)
             {
                 s += (c.Fitness / fitnessSum);
                 rangeMax[k++] = s;
@@ -54,20 +53,20 @@ namespace Optimization
                     if (wheelValue <= rangeMax[i])
                     {
                         // agregar a poblacion
-                        newPopulation.Add(((IChromosome)chromosomes[i]).Clone());
+                        newPopulation.Add(((IIndividual)Individuals[i]).Clone());
                         break;
                     }
                 }
             }
 
             // vaciar la poblacion anterior
-            chromosomes.Clear();
+            Individuals.Clear();
 
             // move elements from new to current population
             // !!! moving is done to reduce objects cloning
             for (int i = 0; i < size; i++)
             {
-                chromosomes.Add(newPopulation[0]);
+                Individuals.Add(newPopulation[0]);
                 newPopulation.RemoveAt(0);
             }
         }
