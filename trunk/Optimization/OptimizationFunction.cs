@@ -64,27 +64,27 @@ namespace Optimization
         /// <summary>
         /// Evalua un cromosoma
         /// </summary>
-        public double Evaluate(IChromosome chromosome)
+        public double Evaluate(IIndividual Individual)
         {
-            double functionValue = Function.Compile().Invoke((double)Translate((chromosome as BinaryChromosome)));
+            double functionValue = Function.Compile().Invoke((double)Translate((Individual as BinaryIndividual)));
             return (mode == OptimizationModes.Maximization) ? functionValue : 1 / functionValue;
         }
 
         /// <summary>
-        /// Traduce genotipo a fenotipo - por ahora, esto va en IChromosome
+        /// Traduce genotipo a fenotipo - por ahora, esto va en IIndividual
         /// </summary>
-        public object Translate(IChromosome chromosome)
+        public object Translate(IIndividual Individual)
         {
-            return TranslateNative(chromosome);
+            return TranslateNative(Individual);
         }
 
         /// <summary>
         /// Traduce genotipo a fenotipo 
         /// </summary>
-        public double TranslateNative(IChromosome chromosome)
+        public double TranslateNative(IIndividual Individual)
         {
-            double val = ((BinaryChromosome)chromosome).Value;
-            double max = ((BinaryChromosome)chromosome).MaxValue;
+            double val = ((BinaryIndividual)Individual).Value;
+            double max = ((BinaryIndividual)Individual).MaxValue;
             return val * range.Length / max + range.Min;
         }
     }
