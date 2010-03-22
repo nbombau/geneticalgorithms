@@ -44,13 +44,15 @@ namespace Genetics
         }
 
         private double MutationRate 
-        { 
-            get { return 0.1; } 
+        {
+            get { return mutationRate; }
+            set { mutationRate = value; }
         }
 
         private double fitnessMax = 0;
         private double fitnessSum = 0;
         private double fitnessAvg = 0;
+        private double mutationRate = 0.05;
         private IIndividual bestIndividual = default(IIndividual);
         private IIndividual bestSolution = default(IIndividual);
 
@@ -170,6 +172,20 @@ namespace Genetics
             : this(size, ancestor, fitnessFunction, selectionMethod, iterations)
         {
             randomSelectionPortion = Math.Max(0, Math.Min(0.5, randomSelectionPortion));
+        }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public Population(int size,
+            IIndividual ancestor,
+            IFitnessFunction fitnessFunction,
+            ISelection selectionMethod,
+            int iterations,
+            double mutationRate)
+            : this(size, ancestor, fitnessFunction, selectionMethod, iterations)
+        {
+            MutationRate = mutationRate;
         }
 
         #endregion

@@ -82,6 +82,11 @@ namespace Presentation
             get { return (int)numIndividuals.Value; }
         }
 
+        private double MutationRate
+        {
+            get { return (double)numMutationRate.Value / 100; }
+        }
+
         #endregion Propiedades
 
         #region Constructor
@@ -195,6 +200,7 @@ namespace Presentation
             numBits.Enabled = !numBits.Enabled;
             numIndividuals.Enabled = !numIndividuals.Enabled;
             numIterations.Enabled = !numIterations.Enabled;
+            numMutationRate.Enabled = !numMutationRate.Enabled;
             btnStart.Enabled = !btnStart.Enabled;
             btnStop.Enabled = !btnStop.Enabled;
             cmbSelectionMethod.Enabled = !cmbSelectionMethod.Enabled;

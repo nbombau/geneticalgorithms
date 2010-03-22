@@ -46,6 +46,8 @@
             this.txtBest = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.chart = new Presentation.Chart();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numMutationRate = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -53,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numBits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIndividuals)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numMutationRate)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -60,7 +63,7 @@
             this.groupBox1.Controls.Add(this.chart);
             this.groupBox1.Location = new System.Drawing.Point(243, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(467, 330);
+            this.groupBox1.Size = new System.Drawing.Size(467, 351);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funcion";
@@ -75,7 +78,7 @@
             // 
             this.groupBox2.Controls.Add(this.btnStop);
             this.groupBox2.Controls.Add(this.btnStart);
-            this.groupBox2.Location = new System.Drawing.Point(17, 259);
+            this.groupBox2.Location = new System.Drawing.Point(15, 280);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(222, 87);
             this.groupBox2.TabIndex = 1;
@@ -85,17 +88,18 @@
             // btnStop
             // 
             this.btnStop.Enabled = false;
-            this.btnStop.Location = new System.Drawing.Point(116, 36);
+            this.btnStop.Location = new System.Drawing.Point(191, 19);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(75, 23);
+            this.btnStop.Size = new System.Drawing.Size(23, 23);
             this.btnStop.TabIndex = 1;
             this.btnStop.Text = "Detener";
             this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Visible = false;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(22, 36);
+            this.btnStart.Location = new System.Drawing.Point(70, 19);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 0;
@@ -105,6 +109,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.numMutationRate);
+            this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.cmbSelectionMethod);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.numIterations);
@@ -115,7 +121,7 @@
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(21, 96);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(216, 157);
+            this.groupBox3.Size = new System.Drawing.Size(216, 178);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Parametros";
@@ -127,7 +133,7 @@
             this.cmbSelectionMethod.Items.AddRange(new object[] {
             "Ruleta",
             "Elitismo"});
-            this.cmbSelectionMethod.Location = new System.Drawing.Point(109, 116);
+            this.cmbSelectionMethod.Location = new System.Drawing.Point(109, 145);
             this.cmbSelectionMethod.Name = "cmbSelectionMethod";
             this.cmbSelectionMethod.Size = new System.Drawing.Size(101, 21);
             this.cmbSelectionMethod.TabIndex = 7;
@@ -135,7 +141,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 119);
+            this.label4.Location = new System.Drawing.Point(6, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 6;
@@ -251,15 +257,36 @@
             // 
             this.chart.Location = new System.Drawing.Point(16, 19);
             this.chart.Name = "chart";
-            this.chart.Size = new System.Drawing.Size(436, 292);
+            this.chart.Size = new System.Drawing.Size(436, 311);
             this.chart.TabIndex = 0;
             this.chart.Text = "chart1";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 115);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Mutacion (%)";
+            // 
+            // numMutationRate
+            // 
+            this.numMutationRate.Location = new System.Drawing.Point(109, 113);
+            this.numMutationRate.Name = "numMutationRate";
+            this.numMutationRate.Size = new System.Drawing.Size(101, 20);
+            this.numMutationRate.TabIndex = 9;
+            this.numMutationRate.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 358);
+            this.ClientSize = new System.Drawing.Size(722, 379);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -277,6 +304,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numIndividuals)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numMutationRate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -301,5 +329,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox txtBest;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown numMutationRate;
+        private System.Windows.Forms.Label label6;
     }
 }
