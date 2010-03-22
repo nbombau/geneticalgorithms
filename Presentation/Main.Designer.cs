@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chart = new Presentation.Chart();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.numMutationRate = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
             this.cmbSelectionMethod = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.numIterations = new System.Windows.Forms.NumericUpDown();
@@ -45,17 +48,14 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtBest = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.chart = new Presentation.Chart();
-            this.label6 = new System.Windows.Forms.Label();
-            this.numMutationRate = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numMutationRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIterations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIndividuals)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numMutationRate)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -67,6 +67,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funcion";
+            // 
+            // chart
+            // 
+            this.chart.Location = new System.Drawing.Point(16, 19);
+            this.chart.Name = "chart";
+            this.chart.Size = new System.Drawing.Size(436, 311);
+            this.chart.TabIndex = 0;
+            this.chart.Text = "chart1";
             // 
             // backgroundWorker1
             // 
@@ -99,7 +107,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(70, 19);
+            this.btnStart.Location = new System.Drawing.Point(66, 31);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 0;
@@ -125,6 +133,27 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Parametros";
+            // 
+            // numMutationRate
+            // 
+            this.numMutationRate.Location = new System.Drawing.Point(109, 113);
+            this.numMutationRate.Name = "numMutationRate";
+            this.numMutationRate.Size = new System.Drawing.Size(101, 20);
+            this.numMutationRate.TabIndex = 9;
+            this.numMutationRate.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 115);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Mutacion (%)";
             // 
             // cmbSelectionMethod
             // 
@@ -253,35 +282,6 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Mejor Individuo: ";
             // 
-            // chart
-            // 
-            this.chart.Location = new System.Drawing.Point(16, 19);
-            this.chart.Name = "chart";
-            this.chart.Size = new System.Drawing.Size(436, 311);
-            this.chart.TabIndex = 0;
-            this.chart.Text = "chart1";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 115);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Mutacion (%)";
-            // 
-            // numMutationRate
-            // 
-            this.numMutationRate.Location = new System.Drawing.Point(109, 113);
-            this.numMutationRate.Name = "numMutationRate";
-            this.numMutationRate.Size = new System.Drawing.Size(101, 20);
-            this.numMutationRate.TabIndex = 9;
-            this.numMutationRate.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,12 +299,12 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numMutationRate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIterations)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBits)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIndividuals)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numMutationRate)).EndInit();
             this.ResumeLayout(false);
 
         }
