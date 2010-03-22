@@ -122,13 +122,15 @@
             // 
             // cmbSelectionMethod
             // 
-            this.cmbSelectionMethod.Enabled = false;
+            this.cmbSelectionMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSelectionMethod.FormattingEnabled = true;
+            this.cmbSelectionMethod.Items.AddRange(new object[] {
+            "Ruleta",
+            "Elitismo"});
             this.cmbSelectionMethod.Location = new System.Drawing.Point(109, 116);
             this.cmbSelectionMethod.Name = "cmbSelectionMethod";
             this.cmbSelectionMethod.Size = new System.Drawing.Size(101, 21);
             this.cmbSelectionMethod.TabIndex = 7;
-            this.cmbSelectionMethod.Text = "Ruleta";
             // 
             // label4
             // 

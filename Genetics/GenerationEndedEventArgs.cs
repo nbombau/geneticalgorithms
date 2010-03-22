@@ -13,11 +13,11 @@ namespace Genetics
         private int generationNumber;
         public int GenerationNumber { get { return generationNumber; } }
 
-        /*private IChromosome generationBestChromosome;
-        public IChromosome GenerationBestChromosome { get { return generationBestChromosome; } }
+        /*private IIndividual generationBestIndividual;
+        public IIndividual GenerationBestIndividual { get { return generationBestIndividual; } }
 
-        private IChromosome bestChromosome;
-        public IChromosome BestChromosome { get { return generationBestChromosome; } }*/
+        private IIndividual bestIndividual;
+        public IIndividual BestIndividual { get { return generationBestIndividual; } }*/
 
         public GenerationEndedEventArgs(Population p, int genNum)
         {

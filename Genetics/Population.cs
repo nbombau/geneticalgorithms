@@ -15,20 +15,20 @@ namespace Genetics
         private IFitnessFunction FitnessFunction { get; set; }
         private ISelection Selection { get; set; }
         
-        private IList<IChromosome> chromosomes;
-        private IList<IChromosome> Chromosomes
+        private List<IIndividual> individuals;
+        private List<IIndividual> Individuals
         {
             get
             {
-                if (chromosomes == default(IList<IChromosome>))
+                if (individuals == default(List<IIndividual>))
                 {
-                    chromosomes = new List<IChromosome>();
+                    individuals = new List<IIndividual>();
                 }
-                return chromosomes;
+                return individuals;
             }
             set
             {
-                chromosomes = value;
+                Individuals = value;
             }
 
         }
@@ -51,8 +51,8 @@ namespace Genetics
         private double fitnessMax = 0;
         private double fitnessSum = 0;
         private double fitnessAvg = 0;
-        private IChromosome bestChromosome = default(IChromosome);
-        private IChromosome bestSolution = default(IChromosome);
+        private IIndividual bestIndividual = default(IIndividual);
+        private IIndividual bestSolution = default(IIndividual);
 
         #endregion
 
@@ -92,15 +92,15 @@ namespace Genetics
         /// <sumary>
         /// Cromosoma mas apto de la poblacion
         /// </sumary>
-        public IChromosome BestChromosome
+        public IIndividual BestIndividual
         {
-            get { return bestChromosome; }
+            get { return bestIndividual; }
         }
 
         /// <sumary>
         /// Solucion
         /// </sumary>
-        public IChromosome BestSolution
+        public IIndividual BestSolution
         {
             get { return bestSolution; }
         }
@@ -134,7 +134,7 @@ namespace Genetics
         /// Constructor
         /// </summary>
         public Population(int size,
-                            IChromosome ancestor,
+                            IIndividual ancestor,
                             IFitnessFunction fitnessFunction,
                             ISelection selectionMethod,
                             int numberIterations)
@@ -145,16 +145,16 @@ namespace Genetics
             iterations = numberIterations;
             // Agregar el ancestro a la poblacion
             ancestor.Evaluate(fitnessFunction);
-            Chromosomes.Add(ancestor);
+            Individuals.Add(ancestor);
             // Se agregan mas cromosomas a la poblacion
             for (int i = 1; i < size; i++)
             {
                 // Se crea un nuevo cromosoma al azar
-                IChromosome c = ancestor.CreateRandomChromosome();
+                IIndividual c = ancestor.CreateRandomIndividual();
                 // se calcula su aptitud
                 c.Evaluate(fitnessFunction);
                 // Se lo agrega a la poblacion
-                Chromosomes.Add(c);
+                Individuals.Add(c);
             }
         }
 
@@ -162,7 +162,7 @@ namespace Genetics
         /// Constructor
         /// </summary>
         public Population(int size,
-            IChromosome ancestor,
+            IIndividual ancestor,
             IFitnessFunction fitnessFunction,
             ISelection selectionMethod,
             double randomSelectionPortion,
@@ -181,16 +181,16 @@ namespace Genetics
         /// </summary>
         public void Regenerate()
         {
-            IChromosome ancestor = Chromosomes.ElementAt(0) as IChromosome;
+            IIndividual ancestor = Individuals.ElementAt(0) as IIndividual;
 
             // Limpiar la poblacion
-            Chromosomes.Clear();
+            Individuals.Clear();
             // Agregar cromosomas a la misma
             for (int i = 0; i < PopulationSize; i++)
             {
-                IChromosome c = ancestor.CreateRandomChromosome();
+                IIndividual c = ancestor.CreateRandomIndividual();
                 c.Evaluate(FitnessFunction);
-                Chromosomes.Add(c);
+                Individuals.Add(c);
             }
         }
 
@@ -199,28 +199,32 @@ namespace Genetics
         /// </summary>
         public virtual void Crossover()
         {
-            // Reproduccion
-            for (int i = 1; i < PopulationSize; i += 2)
-            {
-                // Se genera un numero al azar para decidir si realizar la reproduccion
-                if (rand.NextDouble() <= CrossOverRate)
+            List<IIndividual> individualsToCrossover = new List<IIndividual>();
+            // Creo una copia de los individuos
+            Individuals.ForEach(i => individualsToCrossover.Add(i.Clone()));
+            // Selecciono con el metodo de seleccion provisto n/2 individuos
+            Selection.Select(individualsToCrossover, (int) PopulationSize / 2);
+            individualsToCrossover = individualsToCrossover.Except(Individuals).ToList();
+
+            // Genero pares en base a los individuos seleccionados
+            var pairs = individualsToCrossover.Where(
+                    (i, index) => index % 2 == 0 && individualsToCrossover.ElementAt(index + 1 ) != default(IIndividual)
+                ).Select(
+                    (j, jIndex) => new { parent1 = j, parent2 = individualsToCrossover.ElementAt(jIndex + 1)}
+            );
+
+            // Cruzo cada par, y lo agrego a la poblacion
+            pairs.ToList().ForEach(pair =>
                 {
-                    // Se crean clones de los padres
-                    IChromosome c1 = Chromosomes.ElementAt(i - 1).Clone() as IChromosome;
-                    IChromosome c2 = Chromosomes.ElementAt(i).Clone() as IChromosome;
-
-                    // Cruzarlos
-                    c1.Crossover(c2);
-
-                    // Evaluar la aptitud de los cromosomas
-                    c1.Evaluate(FitnessFunction);
-                    c2.Evaluate(FitnessFunction);
-
-                    // Agregarlos a la poblacion
-                    Chromosomes.Add(c1);
-                    Chromosomes.Add(c2);
+                    pair.parent1.Crossover(pair.parent2);
+                    // evaluar los individuis del par
+                    pair.parent1.Evaluate(FitnessFunction);
+                    pair.parent2.Evaluate(FitnessFunction);
+                    // agregarlos a la poblacion
+                    Individuals.Add(pair.parent2);
+                    Individuals.Add(pair.parent1);
                 }
-            }
+            );
         }
 
         /// <summary>
@@ -234,13 +238,13 @@ namespace Genetics
                 if (rand.NextDouble() <= MutationRate)
                 {
                     // se clona el cromosoma
-                    IChromosome c = Chromosomes.ElementAt(i).Clone() as IChromosome;
+                    IIndividual c = Individuals.ElementAt(i).Clone() as IIndividual;
                     // se muta el cromosoma
                     c.Mutate();
                     // se calcula la aptitud del mutante
                     c.Evaluate(FitnessFunction);
                     // se lo agrega a la poblacion
-                    Chromosomes.Add(c);
+                    Individuals.Add(c);
                 }
             }
         }
@@ -254,18 +258,18 @@ namespace Genetics
             int randomAmount = (int)(randomSelectionPortion * PopulationSize);
 
             // Realizar la seleccion
-            Selection.Select(Chromosomes, PopulationSize - randomAmount);
+            Selection.Select(Individuals, PopulationSize - randomAmount);
 
             // Agregar cromosomas random
             if (randomAmount > 0)
             {
-                IChromosome ancestor = Chromosomes.ElementAt(0) as IChromosome;
+                IIndividual ancestor = Individuals.ElementAt(0) as IIndividual;
 
                 for (int i = 0; i < randomAmount; i++)
                 {
-                    IChromosome c = ancestor.CreateRandomChromosome();
+                    IIndividual c = ancestor.CreateRandomIndividual();
                     c.Evaluate(FitnessFunction);
-                    Chromosomes.Add(c);
+                    Individuals.Add(c);
                 }
             }
 
@@ -273,7 +277,7 @@ namespace Genetics
             fitnessMax = 0;
             fitnessSum = 0;
 
-            foreach (IChromosome c in Chromosomes)
+            foreach (IIndividual c in Individuals)
             {
                 double fitness = c.Fitness;
 
@@ -284,9 +288,9 @@ namespace Genetics
                 if (fitness > fitnessMax)
                 {
                     fitnessMax = fitness;
-                    bestChromosome = c;
+                    bestIndividual = c;
                     //me fijo si es mejor que la solucion global
-                    if (bestSolution == default(IChromosome) || c.Fitness > bestSolution.Fitness)
+                    if (bestSolution == default(IIndividual) || c.Fitness > bestSolution.Fitness)
                     {
                         bestSolution = c;
                     }
@@ -318,9 +322,9 @@ namespace Genetics
         /// <sumary>
         /// Obtener el Cromosoma en un indice determinado
         /// </sumary>
-        public IChromosome ElementAt(int index)
+        public IIndividual ElementAt(int index)
         {
-            return Chromosomes.ElementAt(index) as IChromosome;
+            return Individuals.ElementAt(index) as IIndividual;
         }
 
 
@@ -330,7 +334,7 @@ namespace Genetics
             System.Diagnostics.Debug.WriteLine("Sum = " + fitnessSum);
             System.Diagnostics.Debug.WriteLine("Avg = " + fitnessAvg);
             System.Diagnostics.Debug.WriteLine("--------------------------");
-            foreach (IChromosome c in Chromosomes)
+            foreach (IIndividual c in Individuals)
             {
                 System.Diagnostics.Debug.WriteLine("genotype = " + c.ToString() +
                     //", phenotype = " +  +
