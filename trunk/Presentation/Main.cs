@@ -30,7 +30,8 @@ namespace Presentation
                         new BinaryIndividual(BitNumber),
                         function,
                         Selection,
-                        Iterations);
+                        Iterations,
+                        MutationRate);
                 }
                 return population;
             }
