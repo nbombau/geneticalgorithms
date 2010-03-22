@@ -9,7 +9,7 @@ namespace Optimization
     /// <summary>
     /// Cromosoma binario
     /// </summary>
-    public class BinaryChromosome : IChromosome
+    public class BinaryIndividual : IIndividual
     {
         protected int length = 9;			
         protected ulong val = 0;		 
@@ -58,7 +58,7 @@ namespace Optimization
         /// <summary>
         /// Constructor
         /// </summary>
-        public BinaryChromosome(int length)
+        public BinaryIndividual(int length)
         {
             this.length = Math.Max(2, Math.Min(MaxLength, length));
             Generate();
@@ -67,7 +67,7 @@ namespace Optimization
         /// <summary>
         /// Constructor de copia
         /// </summary>
-        protected BinaryChromosome(BinaryChromosome source)
+        protected BinaryIndividual(BinaryIndividual source)
         {
             length = source.length;
             val = source.val;
@@ -96,7 +96,7 @@ namespace Optimization
         /// </summary>
         public int CompareTo(object o)
         {
-            double f = ((BinaryChromosome)o).fitness;
+            double f = ((BinaryIndividual)o).fitness;
 
             return (fitness == f) ? 0 : (fitness < f) ? 1 : -1;
         }
@@ -116,17 +116,17 @@ namespace Optimization
         /// <summary>
         /// Crea nuevo cromosoma random con mismos parametros
         /// </summary>
-        public virtual IChromosome CreateRandomChromosome()
+        public virtual IIndividual CreateRandomIndividual()
         {
-            return new BinaryChromosome(length);
+            return new BinaryIndividual(length);
         }
 
         /// <summary>
         /// Clona el cromosoma
         /// </summary>
-        public virtual IChromosome Clone()
+        public virtual IIndividual Clone()
         {
-            return new BinaryChromosome(this);
+            return new BinaryIndividual(this);
         }
 
         /// <summary>
@@ -140,9 +140,9 @@ namespace Optimization
         /// <summary>
         /// Operacion de reproduccion
         /// </summary>
-        public virtual void Crossover(IChromosome pair)
+        public virtual void Crossover(IIndividual pair)
         {
-            BinaryChromosome p = (BinaryChromosome)pair;
+            BinaryIndividual p = (BinaryIndividual)pair;
 
             if ((p != null) && (p.length == length))
             {

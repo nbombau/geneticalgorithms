@@ -6,9 +6,9 @@ using System.Text;
 namespace Genetics
 {
     /// <summary>
-    /// Interface IChromosome
+    /// Interface IIndividual
     /// </summary>
-    public interface IChromosome : IComparable
+    public interface IIndividual : IComparable
     {
         /// <summary>
         /// Genotipo del cromosoma
@@ -33,12 +33,12 @@ namespace Genetics
         /// <summary>
         /// Crea un nuevo cromosoma al azar con los mismos parametros de tamanio, etc.
         /// </summary>
-        IChromosome CreateRandomChromosome();
+        IIndividual CreateRandomIndividual();
 
         /// <summary>
         /// Crea un clon del cromosoma
         /// </summary>
-        IChromosome Clone();
+        IIndividual Clone();
 
         /// <summary>
         /// Operador de mutacion
@@ -48,7 +48,7 @@ namespace Genetics
         /// <summary>
         /// Operador de reproduccion
         /// </summary>
-        void Crossover(IChromosome chromosome);
+        void Crossover(IIndividual Individual);
 
         /// <summary>
         /// Evalua la aptitud del cromosoma para la funcion

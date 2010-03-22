@@ -18,8 +18,8 @@ namespace Genetics
         /// <summary>
         /// Evalua la aptitud del Cromosoma
         /// </summary>
-        /// <param name="chromosome">Cromosoma a evaluar</param>
+        /// <param name="Individual">Cromosoma a evaluar</param>
         /// <returns>Valor de aptitud del cromosoma</returns>
-        double Evaluate(IChromosome chromosome);
+        double Evaluate(IIndividual Individual);
     }
 }
