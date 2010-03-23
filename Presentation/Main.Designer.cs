@@ -184,6 +184,11 @@
             0,
             0,
             0});
+            this.numIterations.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numIterations.Name = "numIterations";
             this.numIterations.Size = new System.Drawing.Size(101, 20);
             this.numIterations.TabIndex = 5;
@@ -215,6 +220,11 @@
             this.numIndividuals.Location = new System.Drawing.Point(109, 24);
             this.numIndividuals.Maximum = new decimal(new int[] {
             200,
+            0,
+            0,
+            0});
+            this.numIndividuals.Minimum = new decimal(new int[] {
+            4,
             0,
             0,
             0});
