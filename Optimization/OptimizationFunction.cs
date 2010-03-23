@@ -58,7 +58,7 @@ namespace Optimization
         {
             this.range = range;
             //TODO: esto va como parametro en realidad
-            this.Function = (x => 0.1 + Math.Sin(x * Math.PI * 5)*0.1 + x*0.2);
+            this.Function = (x => 0.4 + Math.Sin(x * Math.PI * 20)*0.4 + x*0.8);
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace Optimization
         public double Evaluate(IIndividual Individual)
         {
             double functionValue = Function.Compile().Invoke((double)Translate((Individual as BinaryIndividual)));
-            return (mode == OptimizationModes.Maximization) ? functionValue : 1 / functionValue;
+            return (mode == OptimizationModes.Maximization) ? functionValue : (functionValue == 0 ? double.MaxValue: 1 / functionValue);
         }
 
         /// <summary>

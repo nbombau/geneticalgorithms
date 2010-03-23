@@ -126,6 +126,12 @@ namespace Presentation
                     data[j, 1] = function.Function.Compile().Invoke(data[j, 0]);
                 }
                 chart.UpdateDataSeries("solution", data);
+
+                #if debug
+                
+                Trace(e.GenerationNumber);
+                
+                #endif
             }
             catch (Exception)
             {
@@ -207,7 +213,14 @@ namespace Presentation
             cmbSelectionMethod.Enabled = !cmbSelectionMethod.Enabled;
         }
 
-
+        private void Trace(int genNumber)
+        {
+            Debug.WriteLine("Generacion " + genNumber.ToString());
+            for (int i = 0; i < Population.PopulationSize; i++)
+            {
+                Debug.WriteLine(function.TranslateNative(Population.ElementAt(i)).ToString());
+            }
+        }
 
         #endregion Metodos
     }

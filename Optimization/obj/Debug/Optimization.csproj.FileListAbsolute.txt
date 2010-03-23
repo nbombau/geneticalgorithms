@@ -12,3 +12,10 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Optimization\bi
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Optimization\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Optimization\obj\Debug\Optimization.dll
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Optimization\obj\Debug\Optimization.pdb
+C:\Users\Nico\Documents\SIA\Optimization\bin\Debug\Optimization.dll
+C:\Users\Nico\Documents\SIA\Optimization\bin\Debug\Optimization.pdb
+C:\Users\Nico\Documents\SIA\Optimization\bin\Debug\Genetics.dll
+C:\Users\Nico\Documents\SIA\Optimization\bin\Debug\Genetics.pdb
+C:\Users\Nico\Documents\SIA\Optimization\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nico\Documents\SIA\Optimization\obj\Debug\Optimization.dll
+C:\Users\Nico\Documents\SIA\Optimization\obj\Debug\Optimization.pdb
