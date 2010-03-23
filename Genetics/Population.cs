@@ -219,7 +219,8 @@ namespace Genetics
             // Creo una copia de los individuos
             Individuals.ForEach(i => individualsToCrossover.Add(i.Clone()));
             // Selecciono con el metodo de seleccion provisto n/2 individuos
-            Selection.Select(individualsToCrossover, (int) PopulationSize / 2);
+            int aux = (int) PopulationSize / 2;
+            Selection.Select(individualsToCrossover, aux%2==0?aux:aux+1);
             individualsToCrossover = individualsToCrossover.Except(Individuals).ToList();
 
             // Genero pares en base a los individuos seleccionados
