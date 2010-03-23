@@ -25,3 +25,19 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Presentation\ob
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Presentation\obj\x86\Debug\Presentation.exe
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Presentation\obj\x86\Debug\Presentation.pdb
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Presentation\bin\Debug\Presentation.exe.config
+C:\Users\Nico\Documents\SIA\Presentation\bin\Debug\Presentation.exe.config
+C:\Users\Nico\Documents\SIA\Presentation\obj\x86\Debug\Presentation.exe
+C:\Users\Nico\Documents\SIA\Presentation\obj\x86\Debug\Presentation.pdb
+C:\Users\Nico\Documents\SIA\Presentation\bin\Debug\Presentation.exe
+C:\Users\Nico\Documents\SIA\Presentation\bin\Debug\Presentation.pdb
+C:\Users\Nico\Documents\SIA\Presentation\bin\Debug\Genetics.dll
+C:\Users\Nico\Documents\SIA\Presentation\bin\Debug\Optimization.dll
+C:\Users\Nico\Documents\SIA\Presentation\bin\Debug\Genetics.pdb
+C:\Users\Nico\Documents\SIA\Presentation\bin\Debug\Optimization.pdb
+C:\Users\Nico\Documents\SIA\Presentation\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Nico\Documents\SIA\Presentation\obj\x86\Debug\Presentation.MainForm.resources
+C:\Users\Nico\Documents\SIA\Presentation\obj\x86\Debug\Presentation.Properties.Resources.resources
+C:\Users\Nico\Documents\SIA\Presentation\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Nico\Documents\SIA\Presentation\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\Nico\Documents\SIA\Presentation\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\Nico\Documents\SIA\Presentation\obj\x86\Debug\ResGen.write.1.tlog

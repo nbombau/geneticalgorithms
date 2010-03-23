@@ -8,3 +8,8 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Genetics\bin\De
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Genetics\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Genetics\obj\Debug\Genetics.dll
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN\Genetics\obj\Debug\Genetics.pdb
+C:\Users\Nico\Documents\SIA\Genetics\bin\Debug\Genetics.dll
+C:\Users\Nico\Documents\SIA\Genetics\bin\Debug\Genetics.pdb
+C:\Users\Nico\Documents\SIA\Genetics\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nico\Documents\SIA\Genetics\obj\Debug\Genetics.dll
+C:\Users\Nico\Documents\SIA\Genetics\obj\Debug\Genetics.pdb
