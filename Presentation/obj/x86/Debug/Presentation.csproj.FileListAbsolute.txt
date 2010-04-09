@@ -41,3 +41,17 @@ C:\Users\Nico\Documents\SIA\Presentation\obj\x86\Debug\GenerateResource-ResGen.r
 C:\Users\Nico\Documents\SIA\Presentation\obj\x86\Debug\ResGen.read.1.tlog
 C:\Users\Nico\Documents\SIA\Presentation\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
 C:\Users\Nico\Documents\SIA\Presentation\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\bin\Debug\Presentation.exe.config
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Debug\Presentation.exe
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Debug\Presentation.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\bin\Debug\Presentation.exe
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\bin\Debug\Presentation.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\bin\Debug\Genetics.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\bin\Debug\Optimization.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\bin\Debug\Genetics.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\bin\Debug\Optimization.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Debug\Presentation.MainForm.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Debug\Presentation.Properties.Resources.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Debug\ResGen.write.1.tlog
