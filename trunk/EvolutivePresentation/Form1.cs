@@ -79,26 +79,25 @@ namespace EvolutivePresentation
                     {true,true,true,true,truthTable[15,j]}
                 };
 
-                // create fitness function
                 SymbolicRegressionFitness fitness = new SymbolicRegressionFitness(iterationSolution);
-                // create gene function
+
                 ITreeGene gene = (ITreeGene)new BooleanFunction(4);
-                // create population
+
                 Population population = new Population(populationSize,
                         (IIndividual)new TreeIndividual(gene),
                     fitness, (ISelection)new WheelSelection(), 100);
-                // iterations
+
                 int i = 1;
 
-                // loop
+
                 while (!needToStop)
                 {
-                    // run one epoch of genetic algorithm
+
                     population.RunEpoch();
 
                     try
                     {
-                        // get best solution
+
                         string bestFunction = population.BestIndividual.ToString();
 
                         Debug.WriteLine(bestFunction);
@@ -109,7 +108,6 @@ namespace EvolutivePresentation
 
                     }
 
-                    // increase current iteration
                     i++;
 
                     //
@@ -128,7 +126,7 @@ namespace EvolutivePresentation
                             PolishBooleanExpression.Evaluate(population.BestSolution.ToString(), variables).ToString()
                         );
                 }
-                // show solution
+
                 Debug.WriteLine(population.BestIndividual.ToString());
 
             }         
