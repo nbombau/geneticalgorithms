@@ -28,8 +28,8 @@ namespace EvolutivePresentation
 
         private double[,] data = null;
 
-        private int populationSize = 100;
-        private int iterations = 1000;
+        private int populationSize = 120;
+        private int iterations = 300;
         private int selectionMethod = 0;
         private int functionsSet = 0;
         private int geneticMethod = 0;
