@@ -12,10 +12,6 @@ namespace Evolutive
     /// 
     /// <remarks>Calcula el valor de aptitud de un 
     /// <see cref="TreeIndividual">TreeIndividual</see> 
-    ///  el valor es computado como
-    /// <code>cantidad + 1 / ( error + 1 )</code>
-    /// donde <b>error</b> es la suma de de las diferencias absulutas de la funcion evaluada
-    /// en el indivuduo y la tabla de verdad provista
     /// </remarks>
     public class SymbolicRegressionFitness : IFitnessFunction
     {
@@ -50,9 +46,9 @@ namespace Evolutive
         {
             // obtener el individuo en notacion polaca
             string function = chromosome.ToString();
-
+            double fitness = 0;
             //Se suma un error inicial proporcional a la longitud de la expresion
-            double error = ((double)function.Length)/1000;
+            //double error = ((double)function.Length)/1000;
             // para cada linea de la tabla de verdad
             for (int i = 0, n = data.GetLength(0); i < n; i++)
             {
@@ -68,7 +64,10 @@ namespace Evolutive
 
                     // si el arbol generado difiere de la solucion 
                     //se agranda el error en 1 unidad
-                    error += (y == data[i,4]) ? 0 : 1 ;
+                    //error += (y == data[i,4]) ? 0 : 1 ;
+                    fitness += (y == data[i, 4]) ? 1 : 0;
+                    if (i == 15 && (y == data[i, 4]))
+                        fitness += 0.25;
                 }
                 catch
                 {
@@ -76,7 +75,14 @@ namespace Evolutive
                 }
             }
 
-            return data.GetLength(0) + 1/ (error + 1);
+            fitness = (fitness - 16.25 < double.Epsilon) ? Math.Pow(fitness, 4) : Math.Pow(fitness, 3);
+            if (fitness > 0.0)
+            {
+                fitness -= ((double)function.Length); 
+            }
+
+            return fitness;
+            //return data.GetLength(0) + 1/ (error + 1);
         }
 
         /// <summary>

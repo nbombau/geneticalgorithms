@@ -52,7 +52,7 @@ namespace Genetics
         private double fitnessMax = 0;
         private double fitnessSum = 0;
         private double fitnessAvg = 0;
-        private double mutationRate = 0.001;
+        private double mutationRate = 0.005;
         private IIndividual bestIndividual = default(IIndividual);
         private IIndividual bestSolution = default(IIndividual);
 
@@ -311,7 +311,7 @@ namespace Genetics
                 }
                 if (bestSolution == default(IIndividual) || c.Fitness > bestSolution.Fitness)
                 {
-                    bestSolution = c;
+                    bestSolution = c.Clone();
                 }
             }
             fitnessAvg = fitnessSum / PopulationSize;
