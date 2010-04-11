@@ -1,0 +1,7 @@
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Evolutive\bin\Release\Evolutive.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Evolutive\bin\Release\Evolutive.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Evolutive\bin\Release\Genetics.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Evolutive\bin\Release\Genetics.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Evolutive\obj\Release\ResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Evolutive\obj\Release\Evolutive.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Evolutive\obj\Release\Evolutive.pdb

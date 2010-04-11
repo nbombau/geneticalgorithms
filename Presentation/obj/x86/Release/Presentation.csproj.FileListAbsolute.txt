@@ -1,0 +1,14 @@
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\bin\Release\Presentation.exe.config
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\bin\Release\Presentation.exe
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\bin\Release\Presentation.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\bin\Release\Genetics.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\bin\Release\Optimization.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\bin\Release\Genetics.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\bin\Release\Optimization.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Release\Presentation.MainForm.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Release\Presentation.Properties.Resources.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Release\ResGen.read.1.tlog
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Release\ResGen.write.1.tlog
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Release\Presentation.exe
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Release\Presentation.pdb

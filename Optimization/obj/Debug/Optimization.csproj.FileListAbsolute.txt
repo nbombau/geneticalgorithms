@@ -26,3 +26,10 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Optimization\b
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Optimization\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Optimization\obj\Debug\Optimization.dll
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Optimization\obj\Debug\Optimization.pdb
+c:\GeneticsSVN2\Optimization\bin\Debug\Optimization.dll
+c:\GeneticsSVN2\Optimization\bin\Debug\Optimization.pdb
+c:\GeneticsSVN2\Optimization\bin\Debug\Genetics.dll
+c:\GeneticsSVN2\Optimization\bin\Debug\Genetics.pdb
+c:\GeneticsSVN2\Optimization\obj\Debug\ResolveAssemblyReference.cache
+c:\GeneticsSVN2\Optimization\obj\Debug\Optimization.dll
+c:\GeneticsSVN2\Optimization\obj\Debug\Optimization.pdb

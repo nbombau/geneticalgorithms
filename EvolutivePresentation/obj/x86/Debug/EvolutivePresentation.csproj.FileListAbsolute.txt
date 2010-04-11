@@ -13,3 +13,17 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePrese
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\EvolutivePresentation.exe
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\EvolutivePresentation.pdb
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\EvolutivePresentation.MainForm.resources
+c:\GeneticsSVN2\EvolutivePresentation\bin\Debug\EvolutivePresentation.exe.config
+c:\GeneticsSVN2\EvolutivePresentation\bin\Debug\EvolutivePresentation.exe
+c:\GeneticsSVN2\EvolutivePresentation\bin\Debug\EvolutivePresentation.pdb
+c:\GeneticsSVN2\EvolutivePresentation\bin\Debug\Evolutive.dll
+c:\GeneticsSVN2\EvolutivePresentation\bin\Debug\Genetics.dll
+c:\GeneticsSVN2\EvolutivePresentation\bin\Debug\Evolutive.pdb
+c:\GeneticsSVN2\EvolutivePresentation\bin\Debug\Genetics.pdb
+c:\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\EvolutivePresentation.Form1.resources
+c:\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\EvolutivePresentation.MainForm.resources
+c:\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\EvolutivePresentation.Properties.Resources.resources
+c:\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\EvolutivePresentation.csproj.GenerateResource.Cache
+c:\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\EvolutivePresentation.exe
+c:\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\EvolutivePresentation.pdb

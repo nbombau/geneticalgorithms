@@ -1,0 +1,7 @@
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Optimization\bin\Release\Optimization.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Optimization\bin\Release\Optimization.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Optimization\bin\Release\Genetics.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Optimization\bin\Release\Genetics.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Optimization\obj\Release\ResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Optimization\obj\Release\Optimization.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Optimization\obj\Release\Optimization.pdb
