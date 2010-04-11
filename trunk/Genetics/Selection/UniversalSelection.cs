@@ -6,54 +6,57 @@ using System.Text;
 namespace Genetics
 {
     /// <summary>
-    /// Metodo de seleccion de ruleta
+    /// Metodo de seleccion universal
     /// </summary>
-    public class WheelSelection : ISelection
+    public class UniversalSelection : ISelection
     {
         private static Random rand = new Random((int)DateTime.Now.Ticks);
 
         /// <summary>
         /// Constructor
         /// </summary>
-        public WheelSelection() { }
+        public UniversalSelection() { }
 
         /// <summary>
-        /// Seleccionar un subconjunto de la poblacion
+        /// Seleccionar un subconjunto de la poblacion, los <size> mejores
         /// </summary>
         public void Select(IList<IIndividual> Individuals, int size)
         {
-            IList<IIndividual> newPopulation = new List<IIndividual>();
-         
+            double r = rand.NextDouble();
+            double num = 0.0;
+            IList<IIndividual> newIndividuals = new List<IIndividual>();
+
             int currentSize = Individuals.Count;
 
             double fitnessSum = 0;
-            foreach (IIndividual c in Individuals)
-            {
-                fitnessSum += c.Fitness;
-            }
+
+            (Individuals as List<IIndividual>).ForEach(
+                    i => fitnessSum += i.Fitness
+                );
 
             double[] rangeMax = new double[currentSize];
             double s = 0;
             int k = 0;
 
-            foreach (IIndividual c in Individuals)
-            {
-                s += (c.Fitness / fitnessSum);
-                rangeMax[k++] = s;
-            }
+            (Individuals as List<IIndividual>).ForEach(
+                    i => {
+                        s += (i.Fitness / fitnessSum);
+                        rangeMax[k++] = s;
+                    }
+                );
+
 
             // seleccionar cromosomas de la vieja poblacion a la nueva
             for (int j = 0; j < size; j++)
             {
-                // obtener el valor de la ruleta
-                double wheelValue = rand.NextDouble();
-                // encontrar cromosoma correspondiente
+                // generamos el numero
+                num = (r + j - 1) / size;
                 for (int i = 0; i < currentSize; i++)
                 {
-                    if (wheelValue <= rangeMax[i])
+                    if (num <= rangeMax[i])
                     {
                         // agregar a poblacion
-                        newPopulation.Add(((IIndividual)Individuals[i]).Clone());
+                        newIndividuals.Add(((IIndividual)Individuals[i]).Clone());
                         break;
                     }
                 }
@@ -62,11 +65,9 @@ namespace Genetics
             // vaciar la poblacion anterior
             Individuals.Clear();
 
-            for (int i = 0; i < size; i++)
-            {
-                Individuals.Add(newPopulation[0]);
-                newPopulation.RemoveAt(0);
-            }
+            (newIndividuals as List<IIndividual>).ForEach(
+                    ind => Individuals.Add(ind)
+                );
         }
     }
 }

@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetics", "Genetics\Geneti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optimization", "Optimization\Optimization.csproj", "{4085E144-BA34-49F0-8793-59BA5F6981D9}"
 EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{488AF068-7B3B-4780-9227-8982749847C3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evolutive", "Evolutive\Evolutive.csproj", "{DD0B543F-B623-4DAD-8256-54B5060ADD5C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvolutivePresentation", "EvolutivePresentation\EvolutivePresentation.csproj", "{A1B3F365-6F47-4EE2-89B3-6597B437B64A}"
@@ -53,16 +51,6 @@ Global
 		{4085E144-BA34-49F0-8793-59BA5F6981D9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{4085E144-BA34-49F0-8793-59BA5F6981D9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{4085E144-BA34-49F0-8793-59BA5F6981D9}.Release|x86.ActiveCfg = Release|Any CPU
-		{488AF068-7B3B-4780-9227-8982749847C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{488AF068-7B3B-4780-9227-8982749847C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{488AF068-7B3B-4780-9227-8982749847C3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{488AF068-7B3B-4780-9227-8982749847C3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{488AF068-7B3B-4780-9227-8982749847C3}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{488AF068-7B3B-4780-9227-8982749847C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{488AF068-7B3B-4780-9227-8982749847C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{488AF068-7B3B-4780-9227-8982749847C3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{488AF068-7B3B-4780-9227-8982749847C3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{488AF068-7B3B-4780-9227-8982749847C3}.Release|x86.ActiveCfg = Release|Any CPU
 		{DD0B543F-B623-4DAD-8256-54B5060ADD5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DD0B543F-B623-4DAD-8256-54B5060ADD5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD0B543F-B623-4DAD-8256-54B5060ADD5C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
