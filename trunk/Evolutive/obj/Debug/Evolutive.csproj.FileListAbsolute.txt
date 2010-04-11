@@ -5,3 +5,10 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Evolutive\bin\
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Evolutive\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Evolutive\obj\Debug\Evolutive.dll
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Evolutive\obj\Debug\Evolutive.pdb
+c:\GeneticsSVN2\Evolutive\bin\Debug\Evolutive.dll
+c:\GeneticsSVN2\Evolutive\bin\Debug\Evolutive.pdb
+c:\GeneticsSVN2\Evolutive\bin\Debug\Genetics.dll
+c:\GeneticsSVN2\Evolutive\bin\Debug\Genetics.pdb
+c:\GeneticsSVN2\Evolutive\obj\Debug\ResolveAssemblyReference.cache
+c:\GeneticsSVN2\Evolutive\obj\Debug\Evolutive.dll
+c:\GeneticsSVN2\Evolutive\obj\Debug\Evolutive.pdb

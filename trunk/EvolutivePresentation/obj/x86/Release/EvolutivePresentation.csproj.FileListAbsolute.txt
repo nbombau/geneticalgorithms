@@ -1,0 +1,15 @@
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\bin\Release\EvolutivePresentation.exe.config
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\bin\Release\EvolutivePresentation.exe
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\bin\Release\EvolutivePresentation.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\bin\Release\Evolutive.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\bin\Release\Genetics.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\bin\Release\Evolutive.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\bin\Release\Genetics.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Release\EvolutivePresentation.Form1.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Release\EvolutivePresentation.Properties.Resources.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Release\ResGen.read.1.tlog
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Release\ResGen.write.1.tlog
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Release\EvolutivePresentation.exe
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Release\EvolutivePresentation.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Release\EvolutivePresentation.MainForm.resources

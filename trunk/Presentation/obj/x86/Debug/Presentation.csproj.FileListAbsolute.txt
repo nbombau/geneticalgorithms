@@ -55,3 +55,16 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\o
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Debug\Presentation.Properties.Resources.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Debug\ResGen.read.1.tlog
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Presentation\obj\x86\Debug\ResGen.write.1.tlog
+c:\GeneticsSVN2\Presentation\bin\Debug\Presentation.exe.config
+c:\GeneticsSVN2\Presentation\bin\Debug\Presentation.exe
+c:\GeneticsSVN2\Presentation\bin\Debug\Presentation.pdb
+c:\GeneticsSVN2\Presentation\bin\Debug\Genetics.dll
+c:\GeneticsSVN2\Presentation\bin\Debug\Optimization.dll
+c:\GeneticsSVN2\Presentation\bin\Debug\Genetics.pdb
+c:\GeneticsSVN2\Presentation\bin\Debug\Optimization.pdb
+c:\GeneticsSVN2\Presentation\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\GeneticsSVN2\Presentation\obj\x86\Debug\Presentation.MainForm.resources
+c:\GeneticsSVN2\Presentation\obj\x86\Debug\Presentation.Properties.Resources.resources
+c:\GeneticsSVN2\Presentation\obj\x86\Debug\Presentation.csproj.GenerateResource.Cache
+c:\GeneticsSVN2\Presentation\obj\x86\Debug\Presentation.exe
+c:\GeneticsSVN2\Presentation\obj\x86\Debug\Presentation.pdb
