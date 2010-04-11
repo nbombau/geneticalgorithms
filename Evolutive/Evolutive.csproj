@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BooleanFunction.cs" />
+    <Compile Include="Common.cs" />
     <Compile Include="EvolutiveFitnessFunction.cs" />
     <Compile Include="ITreeGene.cs" />
     <Compile Include="PolishBooleanExpression.cs" />

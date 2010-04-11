@@ -42,11 +42,15 @@
     <Compile Include="GenerationEndedEventArgs.cs" />
     <Compile Include="Individual\IIndividual.cs" />
     <Compile Include="FitnessFunction\IFitnessFunction.cs" />
+    <Compile Include="Selection\EliteUniversalMixedSelection.cs" />
+    <Compile Include="Selection\EliteWheelMixedSelection.cs" />
     <Compile Include="Selection\ElitismSelection.cs" />
+    <Compile Include="Selection\IMixedSelection.cs" />
     <Compile Include="Selection\ISelection.cs" />
     <Compile Include="Population.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Selection\SelectionFactory.cs" />
+    <Compile Include="Selection\UniversalSelection.cs" />
     <Compile Include="Selection\WheelSelection.cs" />
   </ItemGroup>
   <ItemGroup>

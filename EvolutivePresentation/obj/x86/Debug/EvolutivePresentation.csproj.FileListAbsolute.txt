@@ -3,6 +3,7 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePrese
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\EvolutivePresentation.Properties.Resources.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\ResGen.read.1.tlog
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\bin\Debug\EvolutivePresentation.exe.config
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\bin\Debug\EvolutivePresentation.exe
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\bin\Debug\EvolutivePresentation.pdb
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\bin\Debug\Evolutive.dll
@@ -11,3 +12,4 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePrese
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\bin\Debug\Genetics.pdb
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\EvolutivePresentation.exe
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\EvolutivePresentation.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Debug\EvolutivePresentation.MainForm.resources

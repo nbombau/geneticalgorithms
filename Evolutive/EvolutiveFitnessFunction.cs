@@ -13,7 +13,7 @@ namespace Evolutive
     /// <remarks>Calcula el valor de aptitud de un 
     /// <see cref="TreeIndividual">TreeIndividual</see> 
     /// </remarks>
-    public class SymbolicRegressionFitness : IFitnessFunction
+    public class EvolutiveFitnessFunction : IFitnessFunction
     {
         // datos
         private bool[,] data;
@@ -27,7 +27,7 @@ namespace Evolutive
         /// <remarks>
         /// El parametro representa el valor de verdad al que queremos llegar
         /// </remarks>
-        public SymbolicRegressionFitness(bool[,] data)
+        public EvolutiveFitnessFunction(bool[,] data)
         {
             this.data = data;
             variables = new bool[4];

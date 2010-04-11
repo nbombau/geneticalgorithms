@@ -14,7 +14,7 @@ namespace Genetics
 
         private IFitnessFunction FitnessFunction { get; set; }
         private ISelection Selection { get; set; }
-        
+        private ISelection Replacement { get; set; }
         private List<IIndividual> individuals;
         private List<IIndividual> Individuals
         {
@@ -36,7 +36,10 @@ namespace Genetics
         private int iterations;
         private int populationSize;
         private double randomSelectionPortion = 0.0;
-
+        private int firstSelectionCount;
+        private int secondSelectionCount;
+        private int firstReplacementCount;
+        private int secondReplacementCount;
         // Parametros de la poblacion
         private double CrossOverRate
         {
@@ -123,7 +126,7 @@ namespace Genetics
         public delegate void GenerationEndedEventHandler(object sender, GenerationEndedEventArgs e);
         public event GenerationEndedEventHandler GenerationEnded;
 
-        protected void OnGenerationEnded(GenerationEndedEventArgs e)
+        public void OnGenerationEnded(GenerationEndedEventArgs e)
         {
             GenerationEnded(this, e);
         }
@@ -142,8 +145,10 @@ namespace Genetics
                             int numberIterations)
         {
             FitnessFunction = fitnessFunction;
-            Selection = selectionMethod;
+            Selection = Replacement = selectionMethod;
             PopulationSize = size;
+            firstSelectionCount = size;
+            firstReplacementCount = ((int)(size / 2)) % 2 == 0 ? (int)(size / 2) : (int)(size / 2) + 1;
             iterations = numberIterations;
             // Agregar el ancestro a la poblacion
             ancestor.Evaluate(fitnessFunction);
@@ -188,6 +193,72 @@ namespace Genetics
             MutationRate = mutationRate;
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public Population(int size,
+                            IIndividual ancestor,
+                            IFitnessFunction fitnessFunction,
+                            ISelection selectionMethod,
+                            ISelection replacementMethod,
+                            int numberIterations,
+                            double mutationRate,
+                            int selectionCount,
+                            int replacementCount)
+        {
+            //firstSelectionCount = ((int)(selectionCount )) % 2 == 0 ? (int)(selectionCount ) : (int)(selectionCount ) + 1;
+            //firstReplacementCount = ((int)(replacementCount)) % 2 == 0 ? (int)(replacementCount) : (int)(replacementCount) + 1;
+            firstSelectionCount = selectionCount;
+            firstReplacementCount = replacementCount;
+            FitnessFunction = fitnessFunction;
+            Selection = selectionMethod;
+            Replacement = replacementMethod ;
+            PopulationSize = size;
+            iterations = numberIterations;
+            MutationRate = mutationRate;
+            // Agregar el ancestro a la poblacion
+            ancestor.Evaluate(fitnessFunction);
+            Individuals.Add(ancestor);
+            // Se agregan mas cromosomas a la poblacion
+            for (int i = 1; i < size; i++)
+            {
+                // Se crea un nuevo cromosoma al azar
+                IIndividual c = ancestor.CreateRandomIndividual();
+                // se calcula su aptitud
+                c.Evaluate(fitnessFunction);
+                // Se lo agrega a la poblacion
+                Individuals.Add(c);
+            }
+        }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public Population(int size,
+                            IIndividual ancestor,
+                            IFitnessFunction fitnessFunction,
+                            ISelection selectionMethod,
+                            ISelection replacementMethod,
+                            int numberIterations,
+                            double mutationRate,
+                            int selectionCount,
+                            int replacementCount,
+                            int secondSelCount,
+                            int secondReplCount)
+            : this(size, ancestor, fitnessFunction, selectionMethod, replacementMethod, numberIterations,
+                        mutationRate, selectionCount, replacementCount
+        )
+        {
+            //secondSelectionCount = ((int)(secondSelCount)) % 2 == 0 ? (int)(secondSelCount) : (int)(secondSelCount) + 1;
+            //secondReplacementCount = ((int)(secondReplCount)) % 2 == 0 ? (int)(secondReplCount) : (int)(secondReplCount) + 1;
+            secondReplacementCount = secondReplCount;
+            secondSelectionCount = secondSelCount;
+            if (firstReplacementCount + secondReplCount != size) 
+            {
+                throw new ApplicationException("La suma de ambos reemplazos debe ser igual al tamaño de la poblacion.");
+            }
+        }
+
         #endregion
 
         #region Metodos
@@ -218,9 +289,17 @@ namespace Genetics
             List<IIndividual> individualsToCrossover = new List<IIndividual>();
             // Creo una copia de los individuos
             Individuals.ForEach(i => individualsToCrossover.Add(i.Clone()));
-            // Selecciono con el metodo de seleccion provisto n/2 individuos
-            int aux = (int) PopulationSize / 2;
-            Selection.Select(individualsToCrossover, aux%2==0?aux:aux+1);
+            // Realizar la seleccion
+            if (Selection is IMixedSelection)
+            {
+                (Selection as IMixedSelection)
+                    .Select(individualsToCrossover, firstSelectionCount, secondSelectionCount == default(int) ? 0 : secondReplacementCount);
+            }
+            else
+            {
+                Selection.Select(individualsToCrossover, firstSelectionCount);
+            }    
+
             individualsToCrossover = individualsToCrossover.Except(Individuals).ToList();
 
             // Genero pares en base a los individuos seleccionados
@@ -271,24 +350,16 @@ namespace Genetics
         /// </summary>
         public virtual void Select()
         {
-            // Cantidad de cromosomas al azar en la nueva poblacion
-            int randomAmount = (int)(randomSelectionPortion * PopulationSize);
-
-            // Realizar la seleccion
-            Selection.Select(Individuals, PopulationSize - randomAmount);
-
-            // Agregar cromosomas random
-            if (randomAmount > 0)
+            // Realizar el reemplazo
+            if (Replacement is IMixedSelection)
             {
-                IIndividual ancestor = Individuals.ElementAt(0) as IIndividual;
-
-                for (int i = 0; i < randomAmount; i++)
-                {
-                    IIndividual c = ancestor.CreateRandomIndividual();
-                    c.Evaluate(FitnessFunction);
-                    Individuals.Add(c);
-                }
+                (Replacement as IMixedSelection)
+                    .Select(Individuals, firstReplacementCount, secondReplacementCount == default(int) ? 0 : secondReplacementCount);
             }
+            else 
+            {
+                Replacement.Select(Individuals, PopulationSize);
+            }        
 
             // Encontrar el mejor
             fitnessMax = 0;
@@ -343,22 +414,6 @@ namespace Genetics
         public IIndividual ElementAt(int index)
         {
             return Individuals.ElementAt(index) as IIndividual;
-        }
-
-
-        public void Trace()
-        {
-            System.Diagnostics.Debug.WriteLine("Max = " + fitnessMax);
-            System.Diagnostics.Debug.WriteLine("Sum = " + fitnessSum);
-            System.Diagnostics.Debug.WriteLine("Avg = " + fitnessAvg);
-            System.Diagnostics.Debug.WriteLine("--------------------------");
-            foreach (IIndividual c in Individuals)
-            {
-                System.Diagnostics.Debug.WriteLine("genotype = " + c.ToString() +
-                    //", phenotype = " +  +
-                    " , fitness = " + c.Fitness);
-            }
-            System.Diagnostics.Debug.WriteLine("==========================");
         }
 
         #endregion Metodos

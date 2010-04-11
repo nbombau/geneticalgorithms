@@ -79,13 +79,13 @@ namespace EvolutivePresentation
                     {true,true,true,true,truthTable[15,j]}
                 };
 
-                SymbolicRegressionFitness fitness = new SymbolicRegressionFitness(iterationSolution);
+                EvolutiveFitnessFunction fitness = new EvolutiveFitnessFunction(iterationSolution);
 
                 ITreeGene gene = (ITreeGene)new BooleanFunction(4);
 
                 Population population = new Population(populationSize,
                         (IIndividual)new TreeIndividual(gene),
-                    fitness, (ISelection)new WheelSelection(), 100);
+                    fitness, (ISelection)new EliteWheelMixedSelection(),new EliteWheelMixedSelection(), 100, 0.005,20,40,20, 80);
 
                 int i = 1;
 
