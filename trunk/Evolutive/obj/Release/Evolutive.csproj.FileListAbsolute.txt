@@ -5,3 +5,10 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Evolutive\bin\
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Evolutive\obj\Release\ResolveAssemblyReference.cache
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Evolutive\obj\Release\Evolutive.dll
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Evolutive\obj\Release\Evolutive.pdb
+C:\Users\Nico\Desktop\tpesia1\Evolutive\bin\Release\Evolutive.dll
+C:\Users\Nico\Desktop\tpesia1\Evolutive\bin\Release\Evolutive.pdb
+C:\Users\Nico\Desktop\tpesia1\Evolutive\bin\Release\Genetics.dll
+C:\Users\Nico\Desktop\tpesia1\Evolutive\bin\Release\Genetics.pdb
+C:\Users\Nico\Desktop\tpesia1\Evolutive\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\tpesia1\Evolutive\obj\Release\Evolutive.dll
+C:\Users\Nico\Desktop\tpesia1\Evolutive\obj\Release\Evolutive.pdb

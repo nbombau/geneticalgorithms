@@ -23,7 +23,7 @@ namespace Evolutive
         protected const int FunctionsCount =4;
 
         // tipo de gen (argumento u operador)
-        private GPGeneType type;
+        private GeneType type;
         // cantidad de variables
         private int variablesCount;
         private int val;
@@ -35,7 +35,7 @@ namespace Evolutive
         /// <summary>
         /// tipo de gen (argumento u operador)
         /// </summary>
-        public GPGeneType GeneType
+        public GeneType GeneType
         {
             get { return type; }
         }
@@ -45,7 +45,7 @@ namespace Evolutive
         /// </summary>
         public int ArgumentsCount
         {
-            get { return (type == GPGeneType.Argument) ? 0 : ((Functions)val) == Functions.Not ? 1:2; }
+            get { return (type == GeneType.Argument) ? 0 : ((Functions)val) == Functions.Not ? 1:2; }
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace Evolutive
         /// <summary>
         /// Constructor
         /// </summary>
-        public BooleanFunction(int variablesCount, GPGeneType type)
+        public BooleanFunction(int variablesCount, GeneType type)
         {
             this.variablesCount = variablesCount;
             // se genera el valor
@@ -87,7 +87,7 @@ namespace Evolutive
         /// </summary>
         public override string ToString()
         {
-            if (type == GPGeneType.Function)
+            if (type == GeneType.Function)
             {
                 switch ((Functions)val)
                 {
@@ -124,16 +124,16 @@ namespace Evolutive
         public void Generate()
         {
             // 0/1/2 es operador, 3 es argumento. 25% de chances de q sea argumento
-            Generate((rand.Next(4) == 3) ? GPGeneType.Argument : GPGeneType.Function);
+            Generate((rand.Next(4) == 3) ? GeneType.Argument : GeneType.Function);
         }
 
         /// <summary>
         /// generar un nodo aleatoriamente de un cierto tipo
         /// </summary>
-        public void Generate(GPGeneType type)
+        public void Generate(GeneType type)
         {
             this.type = type;
-            val = rand.Next((type == GPGeneType.Function) ? FunctionsCount : variablesCount);
+            val = rand.Next((type == GeneType.Function) ? FunctionsCount : variablesCount);
 
         }
 
@@ -148,7 +148,7 @@ namespace Evolutive
         /// <summary>
         /// crea un nuevo nodo de cierto tipo
         /// </summary>
-        public ITreeGene CreateNew(GPGeneType type)
+        public ITreeGene CreateNew(GeneType type)
         {
             return new BooleanFunction(variablesCount, type);
         }

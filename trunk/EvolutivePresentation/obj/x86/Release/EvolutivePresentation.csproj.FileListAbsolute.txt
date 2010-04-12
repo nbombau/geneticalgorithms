@@ -13,3 +13,18 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePrese
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Release\EvolutivePresentation.exe
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Release\EvolutivePresentation.pdb
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\EvolutivePresentation\obj\x86\Release\EvolutivePresentation.MainForm.resources
+C:\Users\Nico\Desktop\tpesia1\EvolutivePresentation\bin\Release\EvolutivePresentation.exe.config
+C:\Users\Nico\Desktop\tpesia1\EvolutivePresentation\obj\x86\Release\EvolutivePresentation.exe
+C:\Users\Nico\Desktop\tpesia1\EvolutivePresentation\obj\x86\Release\EvolutivePresentation.pdb
+C:\Users\Nico\Desktop\tpesia1\EvolutivePresentation\bin\Release\EvolutivePresentation.exe
+C:\Users\Nico\Desktop\tpesia1\EvolutivePresentation\bin\Release\EvolutivePresentation.pdb
+C:\Users\Nico\Desktop\tpesia1\EvolutivePresentation\bin\Release\Evolutive.dll
+C:\Users\Nico\Desktop\tpesia1\EvolutivePresentation\bin\Release\Genetics.dll
+C:\Users\Nico\Desktop\tpesia1\EvolutivePresentation\bin\Release\Evolutive.pdb
+C:\Users\Nico\Desktop\tpesia1\EvolutivePresentation\bin\Release\Genetics.pdb
+C:\Users\Nico\Desktop\tpesia1\EvolutivePresentation\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\tpesia1\EvolutivePresentation\obj\x86\Release\EvolutivePresentation.Form1.resources
+C:\Users\Nico\Desktop\tpesia1\EvolutivePresentation\obj\x86\Release\EvolutivePresentation.MainForm.resources
+C:\Users\Nico\Desktop\tpesia1\EvolutivePresentation\obj\x86\Release\EvolutivePresentation.Properties.Resources.resources
+C:\Users\Nico\Desktop\tpesia1\EvolutivePresentation\obj\x86\Release\GenerateResource-ResGen.read.1.tlog
+C:\Users\Nico\Desktop\tpesia1\EvolutivePresentation\obj\x86\Release\GenerateResource-ResGen.write.1.tlog

@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.lblX0 = new System.Windows.Forms.GroupBox();
+            this.txtOutput = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtMutation = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.numIterations = new System.Windows.Forms.NumericUpDown();
             this.numIndividuals = new System.Windows.Forms.NumericUpDown();
@@ -62,8 +64,7 @@
             this.numReplacementCount1 = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.txtOutput = new System.Windows.Forms.TextBox();
-            this.txtMutation = new System.Windows.Forms.MaskedTextBox();
+            this.btnClean = new System.Windows.Forms.Button();
             this.lblX0.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -88,6 +89,16 @@
             this.lblX0.TabStop = false;
             this.lblX0.Text = "Output";
             // 
+            // txtOutput
+            // 
+            this.txtOutput.Location = new System.Drawing.Point(21, 24);
+            this.txtOutput.Multiline = true;
+            this.txtOutput.Name = "txtOutput";
+            this.txtOutput.ReadOnly = true;
+            this.txtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtOutput.Size = new System.Drawing.Size(497, 309);
+            this.txtOutput.TabIndex = 0;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lblStatus);
@@ -109,7 +120,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(87, 19);
+            this.btnStart.Location = new System.Drawing.Point(20, 19);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 0;
@@ -131,6 +142,14 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Parametros";
+            // 
+            // txtMutation
+            // 
+            this.txtMutation.Location = new System.Drawing.Point(135, 81);
+            this.txtMutation.Mask = "99.9999";
+            this.txtMutation.Name = "txtMutation";
+            this.txtMutation.Size = new System.Drawing.Size(100, 20);
+            this.txtMutation.TabIndex = 6;
             // 
             // label6
             // 
@@ -497,29 +516,22 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.Go);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.WorkCompleted);
             // 
-            // txtOutput
+            // btnClean
             // 
-            this.txtOutput.Location = new System.Drawing.Point(21, 24);
-            this.txtOutput.Multiline = true;
-            this.txtOutput.Name = "txtOutput";
-            this.txtOutput.ReadOnly = true;
-            this.txtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtOutput.Size = new System.Drawing.Size(497, 309);
-            this.txtOutput.TabIndex = 0;
-            // 
-            // txtMutation
-            // 
-            this.txtMutation.Location = new System.Drawing.Point(135, 81);
-            this.txtMutation.Mask = "99.9999";
-            this.txtMutation.Name = "txtMutation";
-            this.txtMutation.Size = new System.Drawing.Size(100, 20);
-            this.txtMutation.TabIndex = 6;
+            this.btnClean.Location = new System.Drawing.Point(162, 431);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(75, 23);
+            this.btnClean.TabIndex = 6;
+            this.btnClean.Text = "Limpiar";
+            this.btnClean.UseVisualStyleBackColor = true;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 506);
+            this.Controls.Add(this.btnClean);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -590,5 +602,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TextBox txtOutput;
         private System.Windows.Forms.MaskedTextBox txtMutation;
+        private System.Windows.Forms.Button btnClean;
     }
 }

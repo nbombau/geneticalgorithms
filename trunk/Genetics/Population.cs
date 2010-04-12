@@ -366,7 +366,7 @@ namespace Genetics
             fitnessSum = 0;
 
             foreach (IIndividual c in Individuals)
-            {
+            { 
                 double fitness = c.Fitness;
 
                 // Acumulamos el valor

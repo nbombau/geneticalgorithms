@@ -394,5 +394,14 @@ namespace EvolutivePresentation
         {
             MessageBox.Show("fin");
         }
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            txtOutput.Text = "";
+            lblXX0.Text = "";
+            lblX1.Text = "";
+            lblX2.Text = "";
+            lblX3.Text = "";
+        }
     }
 }

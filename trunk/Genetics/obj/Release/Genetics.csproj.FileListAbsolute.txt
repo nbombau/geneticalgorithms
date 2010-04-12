@@ -3,3 +3,8 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Genetics\bin\R
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Genetics\obj\Release\ResolveAssemblyReference.cache
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Genetics\obj\Release\Genetics.dll
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Genetics\obj\Release\Genetics.pdb
+C:\Users\Nico\Desktop\tpesia1\Genetics\bin\Release\Genetics.dll
+C:\Users\Nico\Desktop\tpesia1\Genetics\bin\Release\Genetics.pdb
+C:\Users\Nico\Desktop\tpesia1\Genetics\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\tpesia1\Genetics\obj\Release\Genetics.dll
+C:\Users\Nico\Desktop\tpesia1\Genetics\obj\Release\Genetics.pdb
