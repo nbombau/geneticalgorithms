@@ -13,7 +13,7 @@ namespace Evolutive
         /// <summary>
         /// Tipo de gen
         /// </summary>
-        GPGeneType GeneType { get; }
+        GeneType GeneType { get; }
 
         /// <summary>
         /// Cantidad de argumentos
@@ -38,7 +38,7 @@ namespace Evolutive
         /// <summary>
         /// Gen de valor aleatorio
         /// </summary>
-        void Generate(GPGeneType type);
+        void Generate(GeneType type);
 
         /// <summary>
         /// Nuevo gen de tipo y valor aleatorio
@@ -48,13 +48,13 @@ namespace Evolutive
         /// <summary>
         /// Nuevo gen de valor aleatorio
         /// </summary>
-        ITreeGene CreateNew(GPGeneType type);
+        ITreeGene CreateNew(GeneType type);
     }
 
     /// <summary>
     /// Tipos de gen posibles
     /// </summary>
-    public enum GPGeneType
+    public enum GeneType
     {
         Function,
         Argument

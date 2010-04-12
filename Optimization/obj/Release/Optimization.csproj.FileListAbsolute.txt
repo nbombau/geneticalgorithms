@@ -5,3 +5,10 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Optimization\b
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Optimization\obj\Release\ResolveAssemblyReference.cache
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Optimization\obj\Release\Optimization.dll
 C:\Users\admin\Documents\Visual Studio 2010\Projects\GeneticsSVN2\Optimization\obj\Release\Optimization.pdb
+C:\Users\Nico\Desktop\tpesia1\Optimization\bin\Release\Optimization.dll
+C:\Users\Nico\Desktop\tpesia1\Optimization\bin\Release\Optimization.pdb
+C:\Users\Nico\Desktop\tpesia1\Optimization\bin\Release\Genetics.dll
+C:\Users\Nico\Desktop\tpesia1\Optimization\bin\Release\Genetics.pdb
+C:\Users\Nico\Desktop\tpesia1\Optimization\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Nico\Desktop\tpesia1\Optimization\obj\Release\Optimization.dll
+C:\Users\Nico\Desktop\tpesia1\Optimization\obj\Release\Optimization.pdb

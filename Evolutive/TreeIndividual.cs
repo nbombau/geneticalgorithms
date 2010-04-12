@@ -122,7 +122,7 @@ namespace Evolutive
             {
                 // si el nivel es 0, deberia ser un argumento, pues
                 // una expresion no puede contener solo un operador
-                node.Gene = root.Gene.CreateNew(GPGeneType.Argument);
+                node.Gene = root.Gene.CreateNew(GeneType.Argument);
             }
             else
             {
@@ -180,7 +180,7 @@ namespace Evolutive
                     {
                         // si llegamos al maximo nivel, en las hojas
                         // solo puede haber variables
-                        node.Gene.Generate(GPGeneType.Argument);
+                        node.Gene.Generate(GeneType.Argument);
                     }
                     else
                     {
@@ -199,7 +199,7 @@ namespace Evolutive
                     node.Gene.Generate();
 
                     // chequeamos el tipo
-                    if (node.Gene.GeneType == GPGeneType.Argument)
+                    if (node.Gene.GeneType == GeneType.Argument)
                     {
                         node.Children = null;
                     }
@@ -338,7 +338,7 @@ namespace Evolutive
                     // se quitan todos
                     node.Children = null;
                     // se hace que el nodo sea hoja
-                    node.Gene.Generate(GPGeneType.Argument);
+                    node.Gene.Generate(GeneType.Argument);
                 }
                 else
                 {
